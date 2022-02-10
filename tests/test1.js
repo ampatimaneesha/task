@@ -2,21 +2,22 @@ var chai = require('chai');
 var expect = chai.expect;
 var Add= require('../app.js');
 
-describe('add', () => {
-    it('should return sum of numbers', () => {
-        expect(Add("2,13,3" )).to.equal(18);
-        console.log(Add("2,13,3"));
-      });
+//testcase  1
+describe('Function tests', () => {
+  it('should return zero for empty string', () => {
+      expect(Add("")).to.equal(0);  
+      console.log(Add(""));         
   });
-  describe('add', () => {
+  //test case2
+  it('should return -1 if it is one number', () => {
+    expect(Add("1")).to.equal(-1); 
+    console.log(Add("1"));  
+            
+    });
+    //test case 3
     it('should return sum of numbers', () => {
-        expect(Add("2,13,14" )).to.equal(29);
-        console.log(Add("2,13,14"));
-      });
-  });
-  describe('add', () => {
-    it('should return sum of numbers', () => {
-        expect(Add("2,13,14,19" )).to.equal(48);
-        console.log(Add("2,13,14,19"));
-      });
-  });
+      expect(Add("2, 3" )).to.equal(5);
+      console.log(Add("2,3"));
+  
+});
+});
