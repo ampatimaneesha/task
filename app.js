@@ -13,7 +13,16 @@ const Add = function (numbers){
     
   }
 let nums=numbers.split(delimeter).filter(i => i.length>0)
-nums = nums.map(i=>parseInt(i));{
+let negatives= []
+
+nums = nums.map(i=>{
+  const val= parseInt(i);
+  if(val<0)
+  negatives.push(val)
+ return val
+});
+if(negatives.length>0)
+  throw Error(`negatives not allowed, [${negatives}]`)
 
   if(nums.length ==0){
     return 0;
@@ -30,7 +39,7 @@ nums = nums.map(i=>parseInt(i));{
       return sum;
     }
     
-}
+
   }
   
 
